@@ -1,0 +1,79 @@
+# GitHub Actions workflow for deploying to GitHub Pages
+# Copy this file to your project: .github/workflows/deploy-pages.yml
+#
+# This workflow:
+# 1. Triggers on push to main OR manual dispatch
+# 2. Builds your static site (if needed)
+# 3. Deploys to GitHub Pages using OIDC authentication
+#
+# Usage:
+#   - For simple static sites (HTML/CSS/JS): Just push, it deploys
+#   - For build-required sites: Uncomment the build steps
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment environment'
+        required: false
+        default: 'production'
+        type: choice
+        options:
+          - production
+          - preview
+
+# Required permissions for OIDC-based Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Prevent concurrent deployments
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Uncomment if your site needs a build step
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: '20'
+      #     cache: 'npm'
+
+      # - name: Install dependencies
+      #   run: npm ci
+
+      # - name: Build site
+      #   run: npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository (for simple static sites)
+          # Change to ./dist or ./build for built sites
+          path: '.'
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ github.event.inputs.environment || 'production' }}
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
