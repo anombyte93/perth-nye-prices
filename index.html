@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perth NYE 2025 Price Comparison | Ice Cream Factory & More</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .featured { border: 3px solid #f59e0b; }
+        .price-badge { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+        .category-pill { transition: all 0.2s ease; }
+        .category-pill:hover { transform: scale(1.05); }
+        .category-pill.active { ring: 2px; ring-offset: 2px; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+        .pulse { animation: pulse 2s infinite; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
+                    Perth NYE 2025 Price Guide
+                </h1>
+                <p class="text-xl md:text-2xl opacity-90 mb-6">
+                    Ice Cream Factory vs 48 Perth New Year's Eve Events
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 text-sm">
+                    <span class="bg-white/20 px-4 py-2 rounded-full">48 Events Compared</span>
+                    <span class="bg-white/20 px-4 py-2 rounded-full">$0 - $350 Price Range</span>
+                    <span class="bg-white/20 px-4 py-2 rounded-full">Updated Dec 2025</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Stats -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                <div class="text-3xl font-bold text-emerald-600">$0</div>
+                <div class="text-gray-500 text-sm">Cheapest (Free)</div>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                <div class="text-3xl font-bold text-blue-600">$65</div>
+                <div class="text-gray-500 text-sm">Median Price</div>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                <div class="text-3xl font-bold text-amber-600">$54-$148</div>
+                <div class="text-gray-500 text-sm">ICF Price Range</div>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                <div class="text-3xl font-bold text-purple-600">10</div>
+                <div class="text-gray-500 text-sm">Free Events</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured: Ice Cream Factory -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+            <span class="text-amber-500">★</span> Featured: Ice Cream Factory NYE
+        </h2>
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden featured">
+            <div class="md:flex">
+                <div class="md:w-2/3 p-8">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">Featured Event</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Festival</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">NYE x ICF: OUTDOOR</h3>
+                    <p class="text-gray-600 mb-4">Northbridge • 6pm - 1am • 18+</p>
+                    <p class="text-gray-700 mb-6">Multiple stages, national/international acts, Carlton Dry Pub, Red Bull Cabana, McDonald's Silent Disco, fireworks spectacular</p>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <div class="price-badge text-white px-6 py-3 rounded-xl">
+                            <span class="text-sm">From</span>
+                            <span class="text-2xl font-bold ml-2">$53.58</span>
+                            <span class="text-sm ml-1">- $148.03</span>
+                        </div>
+                        <a href="https://www.eventbrite.com.au/e/nye-x-icf-outdoor-tickets-1945284691879"
+                           target="_blank"
+                           class="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-xl font-medium transition">
+                            Get Tickets →
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/3 bg-gradient-to-br from-purple-500 to-pink-500 p-8 flex items-center justify-center">
+                    <div class="text-white text-center">
+                        <div class="text-6xl mb-2">🎆</div>
+                        <div class="text-xl font-bold">Perth's Biggest</div>
+                        <div class="text-lg opacity-90">Summer Festival</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter & Sort Controls -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="flex flex-wrap items-center gap-4 mb-4">
+                <span class="font-semibold text-gray-700">Filter by Category:</span>
+                <button onclick="filterCategory('all')" class="category-pill px-4 py-2 rounded-full bg-gray-900 text-white text-sm font-medium" id="cat-all">All Events</button>
+                <button onclick="filterCategory('Free')" class="category-pill px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium" id="cat-Free">Free (10)</button>
+                <button onclick="filterCategory('Festival')" class="category-pill px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium" id="cat-Festival">Festivals (8)</button>
+                <button onclick="filterCategory('Bottomless')" class="category-pill px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium" id="cat-Bottomless">Bottomless (12)</button>
+                <button onclick="filterCategory('Bar')" class="category-pill px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium" id="cat-Bar">Bars (8)</button>
+                <button onclick="filterCategory('Club/Bar')" class="category-pill px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium" id="cat-Club">Clubs (4)</button>
+                <button onclick="filterCategory('Premium')" class="category-pill px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium" id="cat-Premium">Premium (4)</button>
+                <button onclick="filterCategory('Dining')" class="category-pill px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium" id="cat-Dining">Dining (5)</button>
+            </div>
+            <div class="flex flex-wrap items-center gap-4">
+                <span class="font-semibold text-gray-700">Sort by:</span>
+                <select id="sortSelect" onchange="sortEvents()" class="border border-gray-300 rounded-lg px-4 py-2 text-sm">
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name">Venue Name A-Z</option>
+                </select>
+                <div class="ml-auto text-gray-500">
+                    <span id="eventCount">48</span> events shown
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Chart -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Price Distribution by Category</h3>
+            <div class="h-64">
+                <canvas id="priceChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Cards Grid -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">All Perth NYE 2025 Events</h2>
+        <div id="eventsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Events will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Value Analysis -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Best Value Recommendations</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl p-6 text-white">
+                <div class="text-4xl mb-3">🆓</div>
+                <h3 class="text-xl font-bold mb-2">Best Free Option</h3>
+                <p class="font-semibold text-lg">Elizabeth Quay NYE</p>
+                <p class="opacity-90 text-sm mt-2">Roving performers, floating-stage DJ, food trucks, carnival rides, 2x firework shows - completely free!</p>
+            </div>
+            <div class="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl p-6 text-white">
+                <div class="text-4xl mb-3">🍹</div>
+                <h3 class="text-xl font-bold mb-2">Best Bottomless Value</h3>
+                <p class="font-semibold text-lg">Scarborough Beach Bar - $69</p>
+                <p class="opacity-90 text-sm mt-2">2hr bottomless drinks + share plates + DJs till 1am. Beach vibes, great value!</p>
+            </div>
+            <div class="bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl p-6 text-white">
+                <div class="text-4xl mb-3">🎪</div>
+                <h3 class="text-xl font-bold mb-2">Best Festival Experience</h3>
+                <p class="font-semibold text-lg">ICF: OUTDOOR - from $53.58</p>
+                <p class="opacity-90 text-sm mt-2">Perth's biggest summer festival with multiple stages, bars, food, and midnight fireworks.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ICF Comparison Table -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">How ICF Compares</h2>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Comparison</th>
+                            <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Count</th>
+                            <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Percentage</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 text-gray-900">Events cheaper than ICF ($53.58)</td>
+                            <td class="px-6 py-4 font-semibold text-emerald-600">25</td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-32 bg-gray-200 rounded-full h-2">
+                                        <div class="bg-emerald-500 h-2 rounded-full" style="width: 52%"></div>
+                                    </div>
+                                    <span class="text-sm text-gray-600">52%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 text-gray-900">Events similar price ($50-$150)</td>
+                            <td class="px-6 py-4 font-semibold text-blue-600">12</td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-32 bg-gray-200 rounded-full h-2">
+                                        <div class="bg-blue-500 h-2 rounded-full" style="width: 25%"></div>
+                                    </div>
+                                    <span class="text-sm text-gray-600">25%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 text-gray-900">Events more expensive than ICF ($148+)</td>
+                            <td class="px-6 py-4 font-semibold text-amber-600">11</td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-32 bg-gray-200 rounded-full h-2">
+                                        <div class="bg-amber-500 h-2 rounded-full" style="width: 23%"></div>
+                                    </div>
+                                    <span class="text-sm text-gray-600">23%</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400 mb-4">Data researched December 2025. Prices subject to change.</p>
+            <p class="text-gray-500 text-sm">Built with Claude Code | 48 events analyzed</p>
+        </div>
+    </footer>
+
+    <script>
+        // Event data
+        const events = [
+            { id: 1, venue: "Ice Cream Factory", event: "NYE x ICF: OUTDOOR", location: "Northbridge", category: "Festival", time: "6pm-1am", price_from: 53.58, price_to: 148.03, includes: "Multiple stages, national/international acts, Carlton Dry Pub, Red Bull Cabana, McDonald's Silent Disco, fireworks", age: "18+", link: "https://www.eventbrite.com.au/e/nye-x-icf-outdoor-tickets-1945284691879", featured: true },
+            { id: 2, venue: "SNACK Festival", event: "SNACK NYE", location: "Claremont Showgrounds", category: "Festival", time: "5pm onwards", price_from: 99, price_to: 200, includes: "40+ artists, 11+ bars, food trucks, foam park, silent disco, Peking Duk & Pendulum", age: "18+", link: "https://snack.events/" },
+            { id: 3, venue: "SURRENDER", event: "SURRENDER NYE", location: "Langley Park", category: "Festival", time: "TBA", price_from: 89, price_to: 200, includes: "KAYTRANADA headliner, electronic/hip hop, Perth skyline, fireworks", age: "18+", link: "https://higher-grnd.com.au/surrender-nye" },
+            { id: 4, venue: "Stories", event: "LEVELS [NYE]", location: "Yagan Square", category: "Club/Bar", time: "8pm-2am", price_from: 29.90, price_to: 80, includes: "3 levels, 4 zones, rooftop silent disco, UKG/techno/DNB DJs", age: "18+", link: "https://moshtix.com.au" },
+            { id: 5, venue: "Leederville Precinct", event: "Leederville NYE Block Party", location: "Leederville", category: "Festival", time: "7pm onwards", price_from: 49, price_to: 150, includes: "11 venues, 8 stages, bottomless packages available", age: "18+", link: "https://leedervillenye.com/" },
+            { id: 6, venue: "QT Perth Rooftop", event: "Midnight Marquee", location: "Perth CBD", category: "Premium", time: "Evening", price_from: 269, price_to: 350, includes: "Circus acts, DJ sets, bubbles, Balter beers, oysters, caviar, canapés", age: "18+", link: "https://qthotels.com/perth" },
+            { id: 7, venue: "The Left Bank", event: "NYE At The Leftie", location: "East Fremantle", category: "Bottomless", time: "7pm-1am", price_from: 90, price_to: 90, includes: "3-hour bottomless drinks (tap beer, wine, house spirits)", age: "18+", link: "https://events.humanitix.com" },
+            { id: 8, venue: "Si Paradiso", event: "Paradiso Courtyard Party", location: "Perth", category: "Bar", time: "Evening", price_from: 60, price_to: 100, includes: "DJ sets, soulful disco, cosmic grooves, wine and cocktails", age: "18+", link: "https://sevenrooms.com" },
+            { id: 9, venue: "The Rechabite", event: "GARBAGE NYE", location: "Perth CBD", category: "Club/Bar", time: "9pm-Late", price_from: 49, price_to: 80, includes: "3 stages rooftop to basement, X-Coast, Clouds, DJ g2g", age: "18+", link: "https://garbagetv.tv/pages/event-tickets" },
+            { id: 10, venue: "Market Grounds", event: "Tulum NYE", location: "Perth", category: "Bar", time: "4pm onwards", price_from: 20, price_to: 89, includes: "GA: Tequila Sunrise | VIP: canapés, 3hr drinks, fire dancers", age: "18+", link: "https://marketgrounds.com.au" },
+            { id: 11, venue: "Hotel Rottnest", event: "Hotel Rottnest NYE", location: "Rottnest Island", category: "Premium", time: "6:30pm-12:30am", price_from: 129, price_to: 200, includes: "DJ sets, Feel Estate band, 8pm family fireworks", age: "All ages", link: "https://humanitix.com" },
+            { id: 12, venue: "The Court", event: "No Scrubs NYE Party", location: "Perth CBD", category: "Club/Bar", time: "8pm-Late", price_from: 10, price_to: 30, includes: "Drag shows, balloon drops, confetti cannons, 90s/00s throwbacks", age: "18+", link: "https://thecourt.com.au" },
+            { id: 13, venue: "The Camfield", event: "NYE Garden Party", location: "Burswood", category: "Bottomless", time: "7pm onwards", price_from: 35, price_to: 140, includes: "GA $35 | Bottomless: 3-course + 3hr drinks $75-$140", age: "18+", link: "https://thecamfieldbar.com.au" },
+            { id: 14, venue: "The Aviary", event: "Neon Jungle NYE", location: "Perth CBD", category: "Bottomless", time: "7pm onwards", price_from: 105, price_to: 150, includes: "3hr free-flowing drinks, 3 food stations, UV paint, jungle theme", age: "18+", link: "https://theaviaryperth.com.au" },
+            { id: 15, venue: "Elizabeth Quay", event: "Hancock Iron Ore NYE", location: "Elizabeth Quay", category: "Free", time: "Various", price_from: 0, price_to: 0, includes: "FREE: Roving performers, DJ, food trucks, carnival rides, 2x firework shows", age: "All ages", link: "https://visitperth.com" },
+            { id: 16, venue: "Yagan Square", event: "NYE at Yagan Square", location: "Yagan Square", category: "Free", time: "7:30pm onwards", price_from: 0, price_to: 0, includes: "FREE: Famous Sharron MC, DJs, open-air dancefloor", age: "All ages", link: "https://visitperth.com" },
+            { id: 17, venue: "Freedom Time", event: "Freedom Time NYE", location: "Supreme Court Gardens", category: "Festival", time: "5pm-2am", price_from: 109, price_to: 200, includes: "Electronic dance acts, open-air festival", age: "18+", link: "https://freedomtime.com.au" },
+            { id: 18, venue: "The Gallery", event: "Farewell 2024 Rooftop", location: "Perth CBD", category: "Bottomless", time: "6pm onwards", price_from: 80, price_to: 120, includes: "4-hour drinks package, DJs all night", age: "18+", link: "https://thegalleryperth.com.au" },
+            { id: 19, venue: "Claremont Hotel", event: "Claremont NYE", location: "Claremont", category: "Bottomless", time: "8:30pm onwards", price_from: 24, price_to: 140, includes: "Rooftop silent disco, DJ, Fleetwood Mac tribute, bottomless options", age: "18+", link: "https://theclaremont.com.au" },
+            { id: 20, venue: "The Stables", event: "1995 NYE", location: "Perth", category: "Bottomless", time: "7:30-10:30pm", price_from: 75, price_to: 140, includes: "3-course menu + 3hr drinks, 90s throwback theme", age: "18+", link: "https://thestablesbar.com.au" },
+            { id: 21, venue: "Durty Nelly's", event: "Durty Nelly's NYE", location: "Perth CBD", category: "Free", time: "9pm-2am", price_from: 0, price_to: 0, includes: "FREE: Live music from Fiona Rea, Beeswing", age: "18+", link: "https://durtynellys.com.au" },
+            { id: 22, venue: "The Reveley", event: "NYE at The Reveley", location: "Elizabeth Quay", category: "Dining", time: "4pm-10pm", price_from: 89, price_to: 120, includes: "4-course set menu, front-row fireworks views", age: "18+", link: "https://thereveleybar.com.au" },
+            { id: 23, venue: "Lil's Rooftop", event: "NYE at Lil's", location: "Perth", category: "Bottomless", time: "9-11pm", price_from: 65, price_to: 90, includes: "2-hour drinks package, cheese wheel grazing", age: "18+", link: "https://lilsrooftopbar.com.au" },
+            { id: 24, venue: "Miss Mi", event: "NYE at Miss Mi", location: "Perth CBD", category: "Dining", time: "Evening", price_from: 110, price_to: 150, includes: "3-course Southeast Asian set menu, complimentary sparkling", age: "18+", link: "https://missmiperth.com.au" },
+            { id: 25, venue: "The Standard", event: "Oasis NYE", location: "Perth", category: "Bar", time: "Evening", price_from: 40, price_to: 60, includes: "Drink on arrival, nibbles, DJ sets, Brazilian drummers", age: "18+", link: "https://events.humanitix.com" },
+            { id: 26, venue: "The Point Rooftop", event: "70s Theme NYE", location: "Perth", category: "Bar", time: "Evening", price_from: 35, price_to: 50, includes: "Welcome drink, themed cocktails, Glam Star, Austin Powers impersonator", age: "18+", link: "https://trybooking.com" },
+            { id: 27, venue: "KARLA", event: "NYE Feed Me", location: "Perth CBD", category: "Dining", time: "5:30pm onwards", price_from: 99, price_to: 130, includes: "NYE Feed Me menu featuring iconic dishes", age: "18+", link: "https://perthisok.com" },
+            { id: 28, venue: "Lotus", event: "NYE at Lotus", location: "Northbridge", category: "Dining", time: "Evening", price_from: 89, price_to: 169, includes: "Early $89 | Late $169 (4hr drinks), Southeast Asian feast", age: "18+", link: "https://perthisok.com" },
+            { id: 29, venue: "The Paddington", event: "80s Alternative NYE", location: "Paddington", category: "Bar", time: "Evening", price_from: 29, price_to: 40, includes: "Entry + first drink, 80s alternative and new wave party", age: "18+", link: "https://paddo.com.au" },
+            { id: 30, venue: "Rosemount Hotel", event: "NYE Festival", location: "Mount Hawthorn", category: "Festival", time: "Evening", price_from: 40, price_to: 80, includes: "Multiple rooms - Great Gable, RubyHoo, TOWNS", age: "18+", link: "https://rosemounthotel.oztix.com.au" },
+            { id: 31, venue: "The Wembley", event: "NYE Hoe Down", location: "Wembley", category: "Free", time: "Evening", price_from: 0, price_to: 0, includes: "FREE: Country theme, line dancing, live bands", age: "18+", link: "https://perthisok.com" },
+            { id: 32, venue: "The Peach Pit", event: "Peach Perfect NYE", location: "Perth", category: "Bottomless", time: "Evening", price_from: 89, price_to: 110, includes: "3hr bottomless cocktails, slushies, beer, wine, DJ", age: "18+", link: "https://thepeachpitbar.com.au" },
+            { id: 33, venue: "Scarborough Beach Bar", event: "NYE at Scarborough", location: "Scarborough", category: "Bottomless", time: "9-11pm", price_from: 69, price_to: 81, includes: "2hr bottomless drinks + share plates, DJs till 1am", age: "18+", link: "https://scarboroughbeachbar.com.au" },
+            { id: 34, venue: "Good Company", event: "Bottomless NYE", location: "Perth", category: "Bottomless", time: "Evening", price_from: 109, price_to: 130, includes: "Canapés, cheese wheel pasta, tiramisu, bottomless drinks", age: "18+", link: "https://goodcompanybar.com.au" },
+            { id: 35, venue: "The Windsor", event: "90s Theme NYE", location: "South Perth", category: "Bar", time: "Evening", price_from: 10, price_to: 90, includes: "GA $10 | VIP $90 (3hr free-flowing), 90s theme", age: "18+", link: "https://windsorhotelsouthperth.com" },
+            { id: 36, venue: "The Raffles", event: "NYE at The Raffles", location: "Canning Bridge", category: "Bar", time: "8pm onwards", price_from: 0, price_to: 120, includes: "FREE before 8pm | GA $10-20 | VIP $120, best fireworks views", age: "18+", link: "https://rafflesperth.com.au" },
+            { id: 37, venue: "Ludo", event: "Premium Feed Me NYE", location: "Perth", category: "Premium", time: "5:30pm onwards", price_from: 99, price_to: 150, includes: "Oysters with caviar, kingfish, chateaubriand, Bombe Alaska", age: "18+", link: "https://perthisok.com" },
+            { id: 38, venue: "Sweetwater Rooftop", event: "NYE at Sweetwater", location: "Fremantle", category: "Bottomless", time: "8pm-1am", price_from: 100, price_to: 150, includes: "3hr drinks, roaming canapés, food stations", age: "18+", link: "https://sweetwaterbarfreo.com.au" },
+            { id: 39, venue: "Bathers Beach House", event: "NYE at Bathers", location: "Fremantle", category: "Premium", time: "4pm onwards", price_from: 0, price_to: 165, includes: "Downstairs FREE | Upstairs $165 (5hr drinks, glitter bar)", age: "18+", link: "https://bathersbeachhouse.com.au" },
+            { id: 40, venue: "Besk", event: "NYE at Besk", location: "Perth", category: "Bar", time: "5:30pm-2am", price_from: 40, price_to: 120, includes: "GA $40 | Feed Me $110-120 curated menu", age: "18+", link: "https://besk.com.au" },
+            { id: 41, venue: "Port Beach", event: "NYE on The Beach", location: "Fremantle", category: "Festival", time: "6pm-1am", price_from: 50, price_to: 120, includes: "4 stages, beach bars, food trucks, silent disco", age: "18+", link: "https://megatix.com.au" },
+            { id: 42, venue: "Victoria Park Hotel", event: "Kids NYE Countdown", location: "Victoria Park", category: "Free", time: "8:30pm countdown", price_from: 0, price_to: 0, includes: "FREE: Face painting, crafts, glow sticks, lolly station", age: "All ages", link: "https://victoriaparkhotel.com.au" },
+            { id: 43, venue: "The Duke", event: "90s/00s NYE", location: "Perth", category: "Free", time: "9pm onwards", price_from: 0, price_to: 0, includes: "FREE: DJs playing 90s and 00s hits", age: "18+", link: "https://thedukeperth.com.au" },
+            { id: 44, venue: "Quarter Acre Hotel", event: "Family NYE", location: "Perth", category: "Free", time: "8pm countdown", price_from: 0, price_to: 0, includes: "FREE: Kids activities, snack station, DJ until 1am", age: "All ages", link: "https://quarteracrehotel.com.au" },
+            { id: 45, venue: "The Galway Hooker", event: "Irish NYE", location: "Perth", category: "Free", time: "9pm-2am", price_from: 0, price_to: 0, includes: "FREE: Tommy & The Lads live, Irish hospitality", age: "18+", link: "https://thegalwayhooker.com.au" },
+            { id: 46, venue: "Tradewinds Hotel", event: "Family Style NYE", location: "Fremantle", category: "Dining", time: "Evening", price_from: 30, price_to: 99, includes: "Adults $99 | Kids $30: feast, games, mini-golf", age: "All ages", link: "https://tradewindshotel.com.au" },
+            { id: 47, venue: "The Queens Hotel", event: "Queens Through the Decades", location: "Beaufort Street", category: "Club/Bar", time: "Until 2am", price_from: 40, price_to: 120, includes: "Glitter stations, photo booths, silent disco, VIP Loft", age: "18+", link: "https://tickets.oztix.com.au" },
+            { id: 48, venue: "BrewDog", event: "Family NYE at BrewDog", location: "Perth", category: "Free", time: "6:30pm kids disco", price_from: 0, price_to: 0, includes: "FREE: Kids silent disco, garden games, wraps by 10pm", age: "All ages", link: "https://brewdogperth.com.au" }
+        ];
+
+        let filteredEvents = [...events];
+        let currentCategory = 'all';
+
+        // Category colors
+        const categoryColors = {
+            'Free': 'bg-emerald-100 text-emerald-800',
+            'Festival': 'bg-purple-100 text-purple-800',
+            'Bottomless': 'bg-blue-100 text-blue-800',
+            'Bar': 'bg-amber-100 text-amber-800',
+            'Club/Bar': 'bg-pink-100 text-pink-800',
+            'Premium': 'bg-red-100 text-red-800',
+            'Dining': 'bg-orange-100 text-orange-800'
+        };
+
+        function renderEvents() {
+            const grid = document.getElementById('eventsGrid');
+            grid.innerHTML = filteredEvents.map(e => `
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover ${e.featured ? 'featured' : ''}">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-3 py-1 rounded-full text-xs font-medium ${categoryColors[e.category]}">${e.category}</span>
+                            ${e.featured ? '<span class="text-amber-500">★ Featured</span>' : ''}
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">${e.venue}</h3>
+                        <p class="text-gray-600 text-sm mb-2">${e.event}</p>
+                        <p class="text-gray-500 text-xs mb-3">${e.location} • ${e.time} • ${e.age}</p>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">${e.includes}</p>
+                        <div class="flex items-center justify-between">
+                            <div class="price-badge text-white px-4 py-2 rounded-lg">
+                                ${e.price_from === 0 ? '<span class="font-bold">FREE</span>' :
+                                  e.price_from === e.price_to ? `<span class="font-bold">$${e.price_from}</span>` :
+                                  `<span class="font-bold">$${e.price_from}</span><span class="text-xs"> - $${e.price_to}</span>`}
+                            </div>
+                            <a href="${e.link}" target="_blank" class="text-purple-600 hover:text-purple-800 font-medium text-sm">
+                                Details →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            document.getElementById('eventCount').textContent = filteredEvents.length;
+        }
+
+        function filterCategory(category) {
+            currentCategory = category;
+            // Update button styles
+            document.querySelectorAll('.category-pill').forEach(btn => {
+                btn.classList.remove('bg-gray-900', 'text-white');
+                btn.classList.add('bg-gray-100', 'text-gray-700');
+            });
+            const activeBtn = document.getElementById(`cat-${category === 'Club/Bar' ? 'Club' : category}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-gray-100', 'text-gray-700');
+                activeBtn.classList.add('bg-gray-900', 'text-white');
+            }
+
+            if (category === 'all') {
+                filteredEvents = [...events];
+            } else {
+                filteredEvents = events.filter(e => e.category === category);
+            }
+            sortEvents();
+        }
+
+        function sortEvents() {
+            const sortBy = document.getElementById('sortSelect').value;
+            switch(sortBy) {
+                case 'price-low':
+                    filteredEvents.sort((a, b) => a.price_from - b.price_from);
+                    break;
+                case 'price-high':
+                    filteredEvents.sort((a, b) => b.price_from - a.price_from);
+                    break;
+                case 'name':
+                    filteredEvents.sort((a, b) => a.venue.localeCompare(b.venue));
+                    break;
+            }
+            renderEvents();
+        }
+
+        // Initialize chart
+        function initChart() {
+            const ctx = document.getElementById('priceChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Free', 'Festival', 'Bottomless', 'Bar', 'Club/Bar', 'Premium', 'Dining'],
+                    datasets: [{
+                        label: 'Average Starting Price ($)',
+                        data: [0, 73, 75, 30, 32, 166, 83],
+                        backgroundColor: [
+                            'rgba(16, 185, 129, 0.8)',
+                            'rgba(147, 51, 234, 0.8)',
+                            'rgba(59, 130, 246, 0.8)',
+                            'rgba(245, 158, 11, 0.8)',
+                            'rgba(236, 72, 153, 0.8)',
+                            'rgba(239, 68, 68, 0.8)',
+                            'rgba(249, 115, 22, 0.8)'
+                        ],
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: { callback: value => '$' + value }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderEvents();
+            initChart();
+        });
+    </script>
+</body>
+</html>
